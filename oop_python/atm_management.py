@@ -58,7 +58,7 @@ Your choice: """)
         elif user_input == "5":
             self._exit_system()
         else:
-            print("\n❌ Invalid option. Please try again.\n")
+            print("\n Invalid option. Please try again.\n")
             self.menu()
     
     def create_pin(self):
@@ -91,9 +91,9 @@ Your choice: """)
                 print(f"✓ ${amount:.2f} deposited successfully!")
                 print(f"New balance: ${self.balance:.2f}\n")
             else:
-                print("❌ Invalid amount! Amount must be positive.\n")
+                print(" Invalid amount! Amount must be positive.\n")
         except ValueError:
-            print("❌ Invalid input! Please enter a numeric value.\n")
+            print(" Invalid input! Please enter a numeric value.\n")
         
         self.menu()
     
@@ -117,11 +117,11 @@ Your choice: """)
                 print(f"✓ ${amount:.2f} withdrawn successfully!")
                 print(f"Remaining balance: ${self.balance:.2f}\n")
             elif amount > self.balance:
-                print(f"❌ Insufficient balance! Available: ${self.balance:.2f}\n")
+                print(f" Insufficient balance! Available: ${self.balance:.2f}\n")
             else:
-                print("❌ Invalid amount! Amount must be positive.\n")
+                print(" Invalid amount! Amount must be positive.\n")
         except ValueError:
-            print("❌ Invalid input! Please enter a numeric value.\n")
+            print(" Invalid input! Please enter a numeric value.\n")
         
         self.menu()
     
@@ -136,7 +136,7 @@ Your choice: """)
             self.menu()
             return
         
-        print(f"💰 Your current balance is: ${self.balance:.2f}\n")
+        print(f" Your current balance is: ${self.balance:.2f}\n")
         self.menu()
     
     def _verify_pin(self):
@@ -148,7 +148,7 @@ Your choice: """)
         """
         # Check if PIN has been created
         if not self.pin:
-            print("❌ Please create a PIN first!\n")
+            print(" Please create a PIN first!\n")
             return False
         
         entered_pin = input("Enter your PIN: ")
@@ -156,7 +156,7 @@ Your choice: """)
         if entered_pin == self.pin:
             return True
         else:
-            print("❌ Incorrect PIN!\n")
+            print(" Incorrect PIN!\n")
             return False
     
     def _exit_system(self):
