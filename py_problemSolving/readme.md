@@ -9,9 +9,11 @@ Examples :
 Input: n = 13, m = 4
 Output: 12
 Explanation: 12 is the Closest Number to 13 which is divisible by 4.
+
 Input: n = -15, m = 6
 Output: -18
 Explanation: Both -12 and -18 are closest to -15 and divisible by 6, but -18 has the maximum absolute value. So, output is -18.
+
 Constraints:
 -105 ≤ n, m ≤ 105
 
